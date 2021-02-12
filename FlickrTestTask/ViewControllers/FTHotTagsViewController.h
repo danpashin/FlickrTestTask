@@ -1,5 +1,5 @@
 //
-//  HotTagsViewController.h
+//  FTHotTagsViewController.h
 //  FlickrTestTask
 //
 //  Created by Daniil on 12.02.2021.
@@ -7,8 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HotTagsViewController : UIViewController
-
+@interface FTHotTagsViewController : UICollectionViewController
 
 @end
 

@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTHotTagsModel : FTLoadingModel
 
-@property (strong, nonatomic, readonly) NSArray <FTPhoto *> *photos;
+@property (assign, nonatomic) NSUInteger maxItemsToRequest;
+
+@property (strong, nonatomic, readonly, nullable) NSArray <FTPhoto *> *photos;
 
 @end
 

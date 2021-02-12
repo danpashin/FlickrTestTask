@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAB025D6ADE60002C245 /* FTLoadingModel+Internal.m */; };
 		0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */; };
 		0B6FDF3025D6911A005F2B37 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */; };
-		0B6FDF3325D6911A005F2B37 /* HotTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3225D6911A005F2B37 /* HotTagsViewController.m */; };
+		0B6FDF3325D6911A005F2B37 /* FTHotTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */; };
 		0B6FDF3625D6911A005F2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3425D6911A005F2B37 /* Main.storyboard */; };
 		0B6FDF3825D6911B005F2B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3725D6911B005F2B37 /* Assets.xcassets */; };
 		0B6FDF3B25D6911B005F2B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3925D6911B005F2B37 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,8 @@
 		0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF5025D69BDF005F2B37 /* FTURLSession.m */; };
 		0B6FDF5725D6A558005F2B37 /* FTLoadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */; };
 		0B9F152D25D6B9A000953792 /* FTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F152C25D6B9A000953792 /* FTPhoto.m */; };
+		0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */; };
+		C62E87DCFD5A4C6A44BFFB19 /* Pods_FlickrTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747EFA347C7DCF686C7B557C /* Pods_FlickrTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,8 @@
 		0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B6FDF2E25D6911A005F2B37 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0B6FDF3125D6911A005F2B37 /* HotTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotTagsViewController.h; sourceTree = "<group>"; };
-		0B6FDF3225D6911A005F2B37 /* HotTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotTagsViewController.m; sourceTree = "<group>"; };
+		0B6FDF3125D6911A005F2B37 /* FTHotTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHotTagsViewController.h; sourceTree = "<group>"; };
+		0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHotTagsViewController.m; sourceTree = "<group>"; };
 		0B6FDF3525D6911A005F2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B6FDF3725D6911B005F2B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B6FDF3A25D6911B005F2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,11 @@
 		0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingModel.m; sourceTree = "<group>"; };
 		0B9F152B25D6B9A000953792 /* FTPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhoto.h; sourceTree = "<group>"; };
 		0B9F152C25D6B9A000953792 /* FTPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhoto.m; sourceTree = "<group>"; };
+		0B9F153925D6CD4200953792 /* FTHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		138F98FB92455FCB1ECE1F23 /* Pods-FlickrTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrTestTask.release.xcconfig"; path = "Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		5C63104FBFFBDF17B3B2FD0B /* Pods-FlickrTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrTestTask.debug.xcconfig"; path = "Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		747EFA347C7DCF686C7B557C /* Pods_FlickrTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62E87DCFD5A4C6A44BFFB19 /* Pods_FlickrTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,8 @@
 			children = (
 				0B6FDF2A25D6911A005F2B37 /* FlickrTestTask */,
 				0B6FDF2925D6911A005F2B37 /* Products */,
+				599CFA5991EDC8075E0073D9 /* Pods */,
+				6CCF3896DAE8F186ED9BD580 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +103,7 @@
 				0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */,
 				0B6FDF2E25D6911A005F2B37 /* SceneDelegate.h */,
 				0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */,
+				0B9F153825D6CD1F00953792 /* Views */,
 				0B9F153525D6C72A00953792 /* ViewControllers */,
 				0B9F153025D6B9AE00953792 /* Static Models */,
 				0B6FDF5925D6A55A005F2B37 /* Loading Models */,
@@ -150,10 +161,36 @@
 		0B9F153525D6C72A00953792 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B6FDF3125D6911A005F2B37 /* HotTagsViewController.h */,
-				0B6FDF3225D6911A005F2B37 /* HotTagsViewController.m */,
+				0B6FDF3125D6911A005F2B37 /* FTHotTagsViewController.h */,
+				0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0B9F153825D6CD1F00953792 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F153925D6CD4200953792 /* FTHPhotoCollectionViewCell.h */,
+				0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		599CFA5991EDC8075E0073D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C63104FBFFBDF17B3B2FD0B /* Pods-FlickrTestTask.debug.xcconfig */,
+				138F98FB92455FCB1ECE1F23 /* Pods-FlickrTestTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6CCF3896DAE8F186ED9BD580 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				747EFA347C7DCF686C7B557C /* Pods_FlickrTestTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B6FDF4125D6911B005F2B37 /* Build configuration list for PBXNativeTarget "FlickrTestTask" */;
 			buildPhases = (
+				09EECD3F6D4720EB34B65620 /* [CP] Check Pods Manifest.lock */,
 				0B6FDF2425D6911A005F2B37 /* Sources */,
 				0B6FDF2525D6911A005F2B37 /* Frameworks */,
 				0B6FDF2625D6911A005F2B37 /* Resources */,
+				204854E9BB15B2F86536E215 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +260,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09EECD3F6D4720EB34B65620 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickrTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		204854E9BB15B2F86536E215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B6FDF2425D6911A005F2B37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,8 +309,9 @@
 			files = (
 				0B59EAA825D6A7390002C245 /* FTHotTagsModel.m in Sources */,
 				0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */,
+				0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */,
 				0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */,
-				0B6FDF3325D6911A005F2B37 /* HotTagsViewController.m in Sources */,
+				0B6FDF3325D6911A005F2B37 /* FTHotTagsViewController.m in Sources */,
 				0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */,
 				0B6FDF3E25D6911B005F2B37 /* main.m in Sources */,
 				0B6FDF3025D6911A005F2B37 /* SceneDelegate.m in Sources */,
@@ -415,11 +497,14 @@
 		};
 		0B6FDF4225D6911B005F2B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C63104FBFFBDF17B3B2FD0B /* Pods-FlickrTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GC87R7BGG;
 				INFOPLIST_FILE = FlickrTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,11 +517,14 @@
 		};
 		0B6FDF4325D6911B005F2B37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138F98FB92455FCB1ECE1F23 /* Pods-FlickrTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GC87R7BGG;
 				INFOPLIST_FILE = FlickrTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

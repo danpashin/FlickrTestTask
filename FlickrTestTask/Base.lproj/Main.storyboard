@@ -1,27 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mPv-ez-hSc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Hot Tags View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Популярные теги-->
+        <scene sceneID="CGo-Am-7TJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HotTagsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="Wc3-Ck-QuT" customClass="FTHotTagsViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" id="6N1-2q-8i5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="jqU-rP-3fr"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="EQ5-6k-JUv"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wSH-ng-S7f">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Wc3-Ck-QuT" id="DUl-Fv-ul1"/>
+                            <outlet property="delegate" destination="Wc3-Ck-QuT" id="LEE-l8-ICC"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Популярные теги" largeTitleDisplayMode="always" id="F8O-yf-xY2"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-yH-e4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="79"/>
+            <point key="canvasLocation" x="-442" y="-863"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jan-qi-jaZ">
+            <objects>
+                <navigationController id="mPv-ez-hSc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="eQT-tn-Y2o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wc3-Ck-QuT" kind="relationship" relationship="rootViewController" id="XII-vP-cbH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9Z-tL-yBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1329" y="-863"/>
         </scene>
     </scenes>
     <resources>
