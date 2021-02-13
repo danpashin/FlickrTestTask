@@ -7,10 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FTPhoto.h"
+#import "FTTouchResponsiveCollectionViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FTHPhotoCollectionViewCell : UICollectionViewCell
+@interface FTHPhotoCollectionViewCell : FTTouchResponsiveCollectionViewCell
 
 @property (strong, nonatomic) FTPhoto *photo;
 
