@@ -28,6 +28,7 @@
     if (self.tags.count > 0) {
         parameters[@"tags"] = [self.tags componentsJoinedByString:@","];
     }
+    [self queryMethod:@"flickr.photos.search" parameters:parameters];
 }
 
 - (BOOL)processResponse:(nullable NSDictionary *)response

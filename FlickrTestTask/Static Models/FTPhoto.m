@@ -13,7 +13,7 @@
 {
     id identifier = response[@"id"];
     id server_id = response[@"server"];
-    id secret = response[@"server"];
+    id secret = response[@"secret"];
     if (!identifier || !server_id || !secret) {
         return nil;
     }
