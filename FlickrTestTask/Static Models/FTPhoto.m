@@ -9,13 +9,20 @@
 
 @implementation FTPhoto
 
-- (instancetype)initWithResponse:(NSDictionary *)response
-{ 
+- (nullable instancetype)initWithResponse:(NSDictionary *)response
+{
+    id identifier = response[@"id"];
+    id server_id = response[@"server"];
+    id secret = response[@"server"];
+    if (!identifier || !server_id || !secret) {
+        return nil;
+    }
+    
     self = [self init];
     if (self) {
-        _identifier = response[@"id"];
-        _server_id = response[@"server"];
-        _secret = response[@"secret"];
+        _identifier = identifier;
+        _server_id = server_id;
+        _secret = secret;
         _caption = response[@"title"];
     }
     

@@ -41,6 +41,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     layout.itemSize =  CGSizeMake(140.0, 120.0);
     layout.sectionInset = UIEdgeInsetsMake(16.0, 24.0, 16.0, 24.0);

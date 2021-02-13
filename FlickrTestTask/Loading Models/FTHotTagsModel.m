@@ -11,6 +11,16 @@
 
 @implementation FTHotTagsModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _maxItemsToRequest = 25;
+        _photos = nil;
+    }
+    return self;
+}
+
 - (void)queryAPI
 {
     NSAssert(self.maxItemsToRequest != 0, @"Set the items count to request");

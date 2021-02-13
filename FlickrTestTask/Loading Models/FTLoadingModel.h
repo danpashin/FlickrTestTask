@@ -14,16 +14,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol FTLoadingModelDelegate <NSObject>
 
+/// This method is called each time model ends updating its response data
+/// @param model Model instance which ended updating data
 - (void)loadingModelReceivedUpdate:(FTLoadingModel *)model;
 
 @end
 
 @interface FTLoadingModel : NSObject <FTResponseModel>
 
+/// Endpoint of the current API
 + (NSString *)apiEndpoint;
 
 @property (weak, nonatomic) id <FTLoadingModelDelegate> delegate;
 
+/// Sends query in background to the API server
 - (void)queryAPI;
 
 @end

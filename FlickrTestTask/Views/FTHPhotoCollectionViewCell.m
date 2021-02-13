@@ -20,6 +20,8 @@ static const CGFloat cornerRadius = 8.0;
 {
     self = [super initWithFrame:frame];
     if (self) {
+        _preferredPhotoSize = kFTPhotoSizeSmall240;
+        
         _photoView = [UIImageView new];
         _photoView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:_photoView];

@@ -9,7 +9,6 @@
 #import "FTHPhotoCollectionViewCell.h"
 
 @interface FTTagDetailViewController ()
-@property (assign, nonatomic) FTPhotoSize preferredPreviewSize;
 @end
 
 @implementation FTTagDetailViewController
@@ -24,7 +23,6 @@
     _model = [FTSearchModel new];
     _model.delegate = self;
     _model.maxItemsToRequest = 50;
-    _preferredPreviewSize = kFTPhotoSizeSmall240;
 }
 
 - (void)viewDidLoad {
@@ -48,7 +46,6 @@
     FTHPhotoCollectionViewCell *cell = (FTHPhotoCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"previewCell"
                                                                                                                forIndexPath:indexPath];
     cell.photo = self.model.photos[(NSUInteger)indexPath.row];
-    cell.preferredPhotoSize = self.preferredPreviewSize;
     cell.showsCaption = NO;
     [cell updateContents];
     

@@ -10,12 +10,24 @@
 
 @implementation FTSearchModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _maxItemsToRequest = 25;
+        _photos = nil;
+        _tags = nil;
+    }
+    return self;
+}
+
 - (void)queryAPI
 {
-    [self queryMethod:@"flickr.photos.search" parameters:@{
-        @"tags": [self.tags componentsJoinedByString:@","],
-        @"per_page": [NSString stringWithFormat:@"%zd", self.maxItemsToRequest]
-    }];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"per_page"] = [NSString stringWithFormat:@"%zd", self.maxItemsToRequest];
+    if (self.tags.count > 0) {
+        parameters[@"tags"] = [self.tags componentsJoinedByString:@","];
+    }
 }
 
 - (BOOL)processResponse:(nullable NSDictionary *)response
