@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0D5AC925D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AC825D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m */; };
+		0B0D5AD325D7B5DD00FB4698 /* FTLoadingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */; };
 		0B59EAA825D6A7390002C245 /* FTHotTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAA725D6A7390002C245 /* FTHotTagsModel.m */; };
 		0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAB025D6ADE60002C245 /* FTLoadingModel+Internal.m */; };
 		0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		0B0D5AC725D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTouchResponsiveCollectionViewCell.h; sourceTree = "<group>"; };
 		0B0D5AC825D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTouchResponsiveCollectionViewCell.m; sourceTree = "<group>"; };
+		0B0D5AD125D7B5DD00FB4698 /* FTLoadingCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingCollectionViewController.h; sourceTree = "<group>"; };
+		0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingCollectionViewController.m; sourceTree = "<group>"; };
 		0B59EAA625D6A7390002C245 /* FTHotTagsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHotTagsModel.h; sourceTree = "<group>"; };
 		0B59EAA725D6A7390002C245 /* FTHotTagsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHotTagsModel.m; sourceTree = "<group>"; };
 		0B59EAAF25D6ADE60002C245 /* FTLoadingModel+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLoadingModel+Internal.h"; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 		0B9F153525D6C72A00953792 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B0D5AD125D7B5DD00FB4698 /* FTLoadingCollectionViewController.h */,
+				0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */,
 				0B6FDF3125D6911A005F2B37 /* FTHotTagsViewController.h */,
 				0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */,
 			);
@@ -317,6 +322,7 @@
 				0B0D5AC925D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m in Sources */,
 				0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */,
 				0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */,
+				0B0D5AD325D7B5DD00FB4698 /* FTLoadingCollectionViewController.m in Sources */,
 				0B6FDF3325D6911A005F2B37 /* FTHotTagsViewController.m in Sources */,
 				0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */,
 				0B6FDF3E25D6911B005F2B37 /* main.m in Sources */,

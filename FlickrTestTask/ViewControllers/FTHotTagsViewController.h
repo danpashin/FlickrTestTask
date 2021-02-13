@@ -5,9 +5,9 @@
 //  Created by Daniil on 12.02.2021.
 //
 
-#import <UIKit/UIKit.h>
+#import "FTLoadingCollectionViewController.h"
 
-@interface FTHotTagsViewController : UICollectionViewController
+@interface FTHotTagsViewController : FTLoadingCollectionViewController
 
 @end
 
