@@ -15,7 +15,8 @@
 {
     NSAssert(self.maxItemsToRequest != 0, @"Set the items count to request");
     [self queryMethod:@"flickr.tags.getHotList" parameters:@{
-        @"count": [NSString stringWithFormat:@"%zd", self.maxItemsToRequest]
+        @"count": [NSString stringWithFormat:@"%zd", self.maxItemsToRequest],
+        @"period": @"week"
     }];
 }
 

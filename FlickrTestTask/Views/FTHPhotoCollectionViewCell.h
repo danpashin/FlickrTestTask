@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic, readonly) UILabel *caption;
 
+@property (assign, nonatomic) BOOL showsCaption;
+
 - (void)updateContents;
 
 @end

@@ -1,38 +1,42 @@
 //
-//  FTHotTagsViewController.m
+//  FTTagDetailViewController.m
 //  FlickrTestTask
 //
-//  Created by Daniil on 12.02.2021.
+//  Created by Daniil on 13.02.2021.
 //
 
-#import "FTHotTagsViewController.h"
-#import "FTHotTagsModel.h"
-#import "FTHPhotoCollectionViewCell.h"
 #import "FTTagDetailViewController.h"
+#import "FTHPhotoCollectionViewCell.h"
 
-@interface FTHotTagsViewController ()
-@property (strong, nonatomic) FTHotTagsModel *model;
+@interface FTTagDetailViewController ()
 @property (assign, nonatomic) FTPhotoSize preferredPreviewSize;
 @end
 
-@implementation FTHotTagsViewController
+@implementation FTTagDetailViewController
+
+- (instancetype)init
+{
+    return [self initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
+}
 
 - (void)commonInit
 {
-    _model = [FTHotTagsModel new];
+    _model = [FTSearchModel new];
     _model.delegate = self;
-    _model.maxItemsToRequest = 25;
+    _model.maxItemsToRequest = 50;
     _preferredPreviewSize = kFTPhotoSizeSmall240;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.model.tags.firstObject;
+    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
+    self.collectionView.alwaysBounceVertical = YES;
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
+    
     [self.model queryAPI];
 }
-
-#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -45,18 +49,10 @@
                                                                                                                forIndexPath:indexPath];
     cell.photo = self.model.photos[(NSUInteger)indexPath.row];
     cell.preferredPhotoSize = self.preferredPreviewSize;
+    cell.showsCaption = NO;
     [cell updateContents];
     
     return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    FTTagDetailViewController *detail = [FTTagDetailViewController new];
-    detail.model.tags = @[
-        self.model.photos[(NSUInteger)indexPath.row].caption
-    ];
-    [self.navigationController pushViewController:detail animated:YES];
 }
 
 @end

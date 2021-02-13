@@ -9,7 +9,7 @@
 #import <SDWebImage/SDWebImage.h>
 
 @interface FTHPhotoCollectionViewCell ()
-
+@property (strong, nonatomic) NSLayoutConstraint *captionHeightConstraint;
 @end
 
 @implementation FTHPhotoCollectionViewCell
@@ -45,10 +45,14 @@ static const CGFloat cornerRadius = 8.0;
         [_photoView.bottomAnchor constraintEqualToAnchor:_caption.topAnchor].active = YES;
         
         _caption.translatesAutoresizingMaskIntoConstraints = NO;
-        [_caption.heightAnchor constraintEqualToConstant:20.0].active = YES;
+        _captionHeightConstraint = [_caption.heightAnchor constraintEqualToConstant:0.0];
+        _captionHeightConstraint.active = YES;
+        
         [_caption.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
         [_caption.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
         [_caption.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+        
+        self.showsCaption = YES;
     }
     return self;
 }
@@ -68,6 +72,12 @@ static const CGFloat cornerRadius = 8.0;
     
     NSString *photoURL = [self.photo urlForSize:self.preferredPhotoSize];
     [self.photoView sd_setImageWithURL:[NSURL URLWithString:photoURL]];
+}
+
+- (void)setShowsCaption:(BOOL)showsCaption
+{
+    _showsCaption = showsCaption;
+    self.captionHeightConstraint.constant = showsCaption ? 20.0 : 0.0;
 }
 
 @end
