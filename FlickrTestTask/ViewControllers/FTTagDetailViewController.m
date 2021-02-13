@@ -7,6 +7,7 @@
 
 #import "FTTagDetailViewController.h"
 #import "FTHPhotoCollectionViewCell.h"
+#import "FTPhotoViewController.h"
 
 @interface FTTagDetailViewController ()
 @end
@@ -50,6 +51,15 @@
     [cell updateContents];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    FTPhotoViewController *photoController = [FTPhotoViewController new];
+    
+    FTPhoto *photo = self.model.photos[(NSUInteger)indexPath.row];
+    photoController.photoURL = [photo urlForSize:kFTPhotoSizeLarge1024];
+    [self.navigationController pushViewController:photoController animated:YES];
 }
 
 @end

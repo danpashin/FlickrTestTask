@@ -11,6 +11,8 @@
 		0B0D5ACF25D7B52000FB4698 /* FTTagDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5ACE25D7B52000FB4698 /* FTTagDetailViewController.m */; };
 		0B0D5AD325D7B5DD00FB4698 /* FTLoadingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */; };
 		0B0D5AD825D7BB6D00FB4698 /* FTSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AD725D7BB6D00FB4698 /* FTSearchModel.m */; };
+		0B0D5AE625D7D2E300FB4698 /* FTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AE525D7D2E300FB4698 /* FTPhotoViewController.m */; };
+		0B0D5AF325D7F29600FB4698 /* FTPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D5AF225D7F29600FB4698 /* FTPhotoScrollView.m */; };
 		0B59EAA825D6A7390002C245 /* FTHotTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAA725D6A7390002C245 /* FTHotTagsModel.m */; };
 		0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAB025D6ADE60002C245 /* FTLoadingModel+Internal.m */; };
 		0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */; };
@@ -37,6 +39,10 @@
 		0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingCollectionViewController.m; sourceTree = "<group>"; };
 		0B0D5AD625D7BB6D00FB4698 /* FTSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTSearchModel.h; sourceTree = "<group>"; };
 		0B0D5AD725D7BB6D00FB4698 /* FTSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTSearchModel.m; sourceTree = "<group>"; };
+		0B0D5AE425D7D2E300FB4698 /* FTPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhotoViewController.h; sourceTree = "<group>"; };
+		0B0D5AE525D7D2E300FB4698 /* FTPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhotoViewController.m; sourceTree = "<group>"; };
+		0B0D5AF125D7F29600FB4698 /* FTPhotoScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhotoScrollView.h; sourceTree = "<group>"; };
+		0B0D5AF225D7F29600FB4698 /* FTPhotoScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhotoScrollView.m; sourceTree = "<group>"; };
 		0B59EAA625D6A7390002C245 /* FTHotTagsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHotTagsModel.h; sourceTree = "<group>"; };
 		0B59EAA725D6A7390002C245 /* FTHotTagsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHotTagsModel.m; sourceTree = "<group>"; };
 		0B59EAAF25D6ADE60002C245 /* FTLoadingModel+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLoadingModel+Internal.h"; sourceTree = "<group>"; };
@@ -181,6 +187,8 @@
 				0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */,
 				0B0D5ACD25D7B52000FB4698 /* FTTagDetailViewController.h */,
 				0B0D5ACE25D7B52000FB4698 /* FTTagDetailViewController.m */,
+				0B0D5AE425D7D2E300FB4698 /* FTPhotoViewController.h */,
+				0B0D5AE525D7D2E300FB4698 /* FTPhotoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,6 +200,8 @@
 				0B0D5AC825D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m */,
 				0B9F153925D6CD4200953792 /* FTHPhotoCollectionViewCell.h */,
 				0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */,
+				0B0D5AF125D7F29600FB4698 /* FTPhotoScrollView.h */,
+				0B0D5AF225D7F29600FB4698 /* FTPhotoScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +342,8 @@
 				0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */,
 				0B0D5AC925D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m in Sources */,
 				0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */,
+				0B0D5AE625D7D2E300FB4698 /* FTPhotoViewController.m in Sources */,
+				0B0D5AF325D7F29600FB4698 /* FTPhotoScrollView.m in Sources */,
 				0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */,
 				0B0D5AD325D7B5DD00FB4698 /* FTLoadingCollectionViewController.m in Sources */,
 				0B6FDF3325D6911A005F2B37 /* FTHotTagsViewController.m in Sources */,
