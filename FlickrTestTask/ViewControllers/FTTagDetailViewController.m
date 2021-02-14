@@ -55,11 +55,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FTPhotoViewController *photoController = [FTPhotoViewController new];
     
+    FTPhotoViewController *photoController = [FTPhotoViewController new];
     FTPhoto *photo = self.model.photos[(NSUInteger)indexPath.row];
     photoController.photoURL = [photo urlForSize:kFTPhotoSizeLarge1024];
-    [self.navigationController pushViewController:photoController animated:YES];
+    
+    [self presentViewController:photoController animated:YES completion:nil];
 }
 
 @end

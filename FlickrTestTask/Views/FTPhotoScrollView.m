@@ -20,6 +20,7 @@
     if (self) {
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
+        self.maximumZoomScale = 1.5;
         
         _photoView = [UIImageView new];
         [self addSubview:_photoView];

@@ -10,26 +10,39 @@
 #import <SDWebImage/SDWebImage.h>
 
 @interface FTPhotoViewController () <UIScrollViewDelegate>
-@property (strong, nonatomic) IBOutlet FTPhotoScrollView *scrollView;
+@property (strong, nonatomic) FTPhotoScrollView *scrollView;
 @end
 
 @implementation FTPhotoViewController
 
+
+#pragma mark - Public methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor tertiarySystemBackgroundColor];
-    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
     
-    self.scrollView = [FTPhotoScrollView new];
-    self.scrollView.delegate = self;
-    [self.view addSubview:self.scrollView];
+    FTPhotoScrollView *photoScrollView = [FTPhotoScrollView new];
+    self.scrollView = photoScrollView;
+    photoScrollView.delegate = self;
+    [self.view addSubview:photoScrollView];
     
-    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.scrollView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
-    [self.scrollView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
-    [self.scrollView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
-    [self.scrollView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeClose];
+    [closeButton addTarget:self action:@selector(dismissController) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:closeButton];
+    
+    photoScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [photoScrollView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [photoScrollView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    [photoScrollView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    [photoScrollView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+    
+    closeButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [closeButton.widthAnchor constraintEqualToConstant:32.0].active = YES;
+    [closeButton.heightAnchor constraintEqualToConstant:32.0].active = YES;
+    [closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:10.0].active = YES;
+    [closeButton.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-10.0].active = YES;
 
     [self loadImage];
 }
@@ -39,6 +52,21 @@
     [super viewWillLayoutSubviews];
     [self updateMinZoomScaleForSize:self.view.bounds.size];
 }
+
+- (void)setPhotoURL:(NSString *)photoURL
+{
+    _photoURL = photoURL;
+    
+    [self loadImage];
+}
+
+- (void)dismissController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - Private methods
 
 - (void)updateMinZoomScaleForSize:(CGSize)size
 {
@@ -51,33 +79,25 @@
 
 - (void)updateConstraintsForSize:(CGSize)size
 {
-    const UIEdgeInsets safeArea = self.view.safeAreaInsets;
     CGSize photoViewSize = self.scrollView.photoView.frame.size;
-    const CGFloat yOffset = MAX(0, (size.height - photoViewSize.height - safeArea.top - safeArea.bottom) / 2.0);
+    const CGFloat yOffset = MAX(0, (size.height - photoViewSize.height) / 2.0);
     self.scrollView.photoTopConstraint.constant = yOffset;
     self.scrollView.photoBottomConstraint.constant = yOffset;
     
     const CGFloat xOffset = MAX(0, (size.width - photoViewSize.width) / 2.0);
     self.scrollView.photoLeadingConstraint.constant = xOffset;
     self.scrollView.photoTrailingConstraint.constant = xOffset;
-    
-    [self.view layoutIfNeeded];
-}
-
-- (void)setPhotoURL:(NSString *)photoURL
-{
-    _photoURL = photoURL;
-    
-    [self loadImage];
 }
 
 - (void)loadImage
 {
-    [self.scrollView.photoView sd_setImageWithURL:[NSURL URLWithString:self.photoURL] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    [self.scrollView.photoView sd_setImageWithURL:[NSURL URLWithString:self.photoURL] 
+                                        completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         self.scrollView.photoView.image = image;
         [self.scrollView.photoView layoutIfNeeded];
     }];
 }
+
 
 #pragma mark - UIScrollViewDelegate
 
