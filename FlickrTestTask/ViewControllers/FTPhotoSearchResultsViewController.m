@@ -35,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
 }
 

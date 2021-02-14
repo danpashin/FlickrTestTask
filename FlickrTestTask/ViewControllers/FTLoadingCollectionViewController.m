@@ -43,15 +43,18 @@
 {
     [super viewDidLoad];
     
+    self.collectionView.alwaysBounceVertical = YES;
+    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
+    
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     layout.sectionInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
     
     if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPad) {
-        layout.itemSize =  CGSizeMake(112.0, 112.0);
+        layout.itemSize = CGSizeMake(112.0, 112.0);
         layout.minimumLineSpacing = 8.0;
         layout.minimumInteritemSpacing = 8.0;
     } else {
-        layout.itemSize =  CGSizeMake(140.0, 140.0);
+        layout.itemSize = CGSizeMake(140.0, 140.0);
         layout.minimumLineSpacing = 16.0;
         layout.minimumInteritemSpacing = 8.0;
     }

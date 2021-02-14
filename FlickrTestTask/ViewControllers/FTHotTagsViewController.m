@@ -35,7 +35,6 @@
     [super viewDidLoad];
     
     self.title = @"Popular tags";
-    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
     
     FTPhotoSearchResultsViewController *resultsVC = [FTPhotoSearchResultsViewController new];
     self.navigationItem.searchController = [[UISearchController alloc] initWithSearchResultsController:resultsVC];
