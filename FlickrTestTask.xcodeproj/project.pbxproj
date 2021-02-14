@@ -27,6 +27,7 @@
 		0B6FDF5725D6A558005F2B37 /* FTLoadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */; };
 		0B9F152D25D6B9A000953792 /* FTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F152C25D6B9A000953792 /* FTPhoto.m */; };
 		0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */; };
+		0BD6E22325D908E600295633 /* FTLoadingModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6E22225D908E600295633 /* FTLoadingModelError.m */; };
 		C62E87DCFD5A4C6A44BFFB19 /* Pods_FlickrTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747EFA347C7DCF686C7B557C /* Pods_FlickrTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		0B9F152C25D6B9A000953792 /* FTPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhoto.m; sourceTree = "<group>"; };
 		0B9F153925D6CD4200953792 /* FTHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		0BD6E22125D908E600295633 /* FTLoadingModelError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingModelError.h; sourceTree = "<group>"; };
+		0BD6E22225D908E600295633 /* FTLoadingModelError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingModelError.m; sourceTree = "<group>"; };
 		138F98FB92455FCB1ECE1F23 /* Pods-FlickrTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrTestTask.release.xcconfig"; path = "Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		5C63104FBFFBDF17B3B2FD0B /* Pods-FlickrTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrTestTask.debug.xcconfig"; path = "Target Support Files/Pods-FlickrTestTask/Pods-FlickrTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		747EFA347C7DCF686C7B557C /* Pods_FlickrTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +177,8 @@
 			children = (
 				0B9F152B25D6B9A000953792 /* FTPhoto.h */,
 				0B9F152C25D6B9A000953792 /* FTPhoto.m */,
+				0BD6E22125D908E600295633 /* FTLoadingModelError.h */,
+				0BD6E22225D908E600295633 /* FTLoadingModelError.m */,
 			);
 			path = "Static Models";
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				0B0D5ACF25D7B52000FB4698 /* FTTagDetailViewController.m in Sources */,
 				0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */,
 				0B6FDF3E25D6911B005F2B37 /* main.m in Sources */,
+				0BD6E22325D908E600295633 /* FTLoadingModelError.m in Sources */,
 				0B6FDF3025D6911A005F2B37 /* SceneDelegate.m in Sources */,
 				0B6FDF5725D6A558005F2B37 /* FTLoadingModel.m in Sources */,
 				0B9F152D25D6B9A000953792 /* FTPhoto.m in Sources */,

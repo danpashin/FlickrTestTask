@@ -32,6 +32,10 @@
 
 - (BOOL)processResponse:(nullable NSDictionary *)response
 {
+    if (![super processResponse:response]) {
+        return NO;
+    }
+    
     NSMutableArray <FTPhoto *> *photos = [NSMutableArray arrayWithCapacity:[response[@"count"] unsignedIntegerValue]];
     _photos = photos;
     
@@ -44,7 +48,7 @@
         [photos addObject:photo];
     }
     
-    [super processResponse:response];
+    [self.delegate loadingModelReceivedUpdate:self];
     return photos.count;
 }
 

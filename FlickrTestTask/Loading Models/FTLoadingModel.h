@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FTResponseModel.h"
+#import "FTLoadingModelError.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// This method is called each time model ends updating its response data
 /// @param model Model instance which ended updating data
 - (void)loadingModelReceivedUpdate:(FTLoadingModel *)model;
+
+- (void)loadingModel:(FTLoadingModel *)model finishedWithError:(FTLoadingModelError *)error;
 
 @end
 

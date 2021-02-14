@@ -21,8 +21,13 @@
 
 - (BOOL)processResponse:(nullable NSDictionary *)response
 {
-    [self.delegate loadingModelReceivedUpdate:self];
-    return NO;
+    if (![response[@"stat"] isEqualToString:@"ok"]) {
+        FTLoadingModelError *error = [FTLoadingModelError errorWithType:kFTLoadingModelErrorTypeServer code:[response[@"code"] integerValue] description:response[@"message"]];
+        [self.delegate loadingModel:self finishedWithError:error];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

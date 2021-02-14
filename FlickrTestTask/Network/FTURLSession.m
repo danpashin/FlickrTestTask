@@ -52,13 +52,11 @@
         // TODO: Add more error handling
         if (error) {
             os_log_error(OS_LOG_DEFAULT, "Got network error: %{public}@", error);
-            [_model processResponse:nil];
             return;
         }
         
         if (![self validateResponse:response]) {
             os_log_error(OS_LOG_DEFAULT, "Failed to validate response: %{public}@", response);
-            [_model processResponse:nil];
             return;
         }
         
@@ -67,7 +65,10 @@
         if (!json || jsonError) {
             os_log_error(OS_LOG_DEFAULT, "Failed deserialize response as JSON: %{public}@", jsonError);
         }
-        [_model processResponse:json];
+        
+        if (![_model processResponse:json]) {
+            os_log_error(OS_LOG_DEFAULT, "Failed to process response: %{public}@", json);
+        }
     }];
     [dataTask resume];
     

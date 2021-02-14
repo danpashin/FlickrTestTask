@@ -62,4 +62,13 @@
     });
 }
 
+- (void)loadingModel:(FTLoadingModel *)model finishedWithError:(FTLoadingModelError *)error
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error has occurred" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) { }]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    });
+}
+
 @end
