@@ -62,6 +62,7 @@
 		0B6FDF5325D69EF9005F2B37 /* FTResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTResponseModel.h; sourceTree = "<group>"; };
 		0B6FDF5525D6A558005F2B37 /* FTLoadingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingModel.h; sourceTree = "<group>"; };
 		0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingModel.m; sourceTree = "<group>"; };
+		0B99E8C425D945F800B3D56B /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
 		0B9F152B25D6B9A000953792 /* FTPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhoto.h; sourceTree = "<group>"; };
 		0B9F152C25D6B9A000953792 /* FTPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhoto.m; sourceTree = "<group>"; };
 		0B9F153925D6CD4200953792 /* FTHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 			children = (
 				0B6FDF2B25D6911A005F2B37 /* AppDelegate.h */,
 				0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */,
+				0B99E8C425D945F800B3D56B /* defines.h */,
 				0B9F153825D6CD1F00953792 /* Views */,
 				0B9F153525D6C72A00953792 /* ViewControllers */,
 				0B9F153025D6B9AE00953792 /* Static Models */,

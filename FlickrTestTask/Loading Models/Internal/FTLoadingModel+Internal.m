@@ -9,12 +9,16 @@
 #import "FTURLRequest.h"
 #import "FTURLSession.h"
 #import "AppDelegate.h"
+#import "defines.h"
 
 @implementation FTLoadingModel (Internal)
 
 - (void)queryMethod:(NSString *)method parameters:(NSDictionary <NSString*, NSString*> *)parameters
 {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    __block AppDelegate *appDelegate = nil;
+    dispatch_main_sync_safe(^{
+        appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    });
     
     FTURLRequest *request = [[FTURLRequest alloc] initWithURL:appDelegate.apiEndpoint];
     request.parameters[@"format"] = @"json";
