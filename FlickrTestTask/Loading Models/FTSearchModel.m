@@ -17,6 +17,7 @@
         _maxItemsToRequest = 25;
         _photos = nil;
         _tags = nil;
+        _text = nil;
     }
     return self;
 }
@@ -28,6 +29,10 @@
     if (self.tags.count > 0) {
         parameters[@"tags"] = [self.tags componentsJoinedByString:@","];
     }
+    if (self.text) {
+        parameters[@"text"] = self.text;
+    }
+    
     [self queryMethod:@"flickr.photos.search" parameters:parameters];
 }
 
@@ -48,6 +53,11 @@
     
     [self.delegate loadingModelReceivedUpdate:self];
     return photos.count;
+}
+
+- (void)clearResults
+{
+    _photos = nil;
 }
 
 @end

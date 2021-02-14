@@ -23,6 +23,7 @@
 		0B6FDF4825D693D6005F2B37 /* FTURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF4725D693D6005F2B37 /* FTURLRequest.m */; };
 		0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF5025D69BDF005F2B37 /* FTURLSession.m */; };
 		0B6FDF5725D6A558005F2B37 /* FTLoadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */; };
+		0B99E8C125D918DF00B3D56B /* FTPhotoSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E8C025D918DF00B3D56B /* FTPhotoSearchResultsViewController.m */; };
 		0B9F152D25D6B9A000953792 /* FTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F152C25D6B9A000953792 /* FTPhoto.m */; };
 		0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F153A25D6CD4200953792 /* FTHPhotoCollectionViewCell.m */; };
 		0BD6E22325D908E600295633 /* FTLoadingModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD6E22225D908E600295633 /* FTLoadingModelError.m */; };
@@ -62,6 +63,8 @@
 		0B6FDF5325D69EF9005F2B37 /* FTResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTResponseModel.h; sourceTree = "<group>"; };
 		0B6FDF5525D6A558005F2B37 /* FTLoadingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingModel.h; sourceTree = "<group>"; };
 		0B6FDF5625D6A558005F2B37 /* FTLoadingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingModel.m; sourceTree = "<group>"; };
+		0B99E8BF25D918DF00B3D56B /* FTPhotoSearchResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhotoSearchResultsViewController.h; sourceTree = "<group>"; };
+		0B99E8C025D918DF00B3D56B /* FTPhotoSearchResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhotoSearchResultsViewController.m; sourceTree = "<group>"; };
 		0B99E8C425D945F800B3D56B /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
 		0B9F152B25D6B9A000953792 /* FTPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPhoto.h; sourceTree = "<group>"; };
 		0B9F152C25D6B9A000953792 /* FTPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPhoto.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				0B0D5AD225D7B5DD00FB4698 /* FTLoadingCollectionViewController.m */,
 				0B6FDF3125D6911A005F2B37 /* FTHotTagsViewController.h */,
 				0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */,
+				0B99E8BF25D918DF00B3D56B /* FTPhotoSearchResultsViewController.h */,
+				0B99E8C025D918DF00B3D56B /* FTPhotoSearchResultsViewController.m */,
 				0B0D5ACD25D7B52000FB4698 /* FTTagDetailViewController.h */,
 				0B0D5ACE25D7B52000FB4698 /* FTTagDetailViewController.m */,
 				0B0D5AE425D7D2E300FB4698 /* FTPhotoViewController.h */,
@@ -340,6 +345,7 @@
 				0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */,
 				0B0D5AC925D7B12A00FB4698 /* FTTouchResponsiveCollectionViewCell.m in Sources */,
 				0B9F153B25D6CD4200953792 /* FTHPhotoCollectionViewCell.m in Sources */,
+				0B99E8C125D918DF00B3D56B /* FTPhotoSearchResultsViewController.m in Sources */,
 				0B0D5AE625D7D2E300FB4698 /* FTPhotoViewController.m in Sources */,
 				0B0D5AF325D7F29600FB4698 /* FTPhotoScrollView.m in Sources */,
 				0B6FDF5125D69BDF005F2B37 /* FTURLSession.m in Sources */,

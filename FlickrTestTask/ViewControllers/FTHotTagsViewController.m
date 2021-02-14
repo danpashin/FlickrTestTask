@@ -9,6 +9,7 @@
 #import "FTHotTagsModel.h"
 #import "FTHPhotoCollectionViewCell.h"
 #import "FTTagDetailViewController.h"
+#import "FTPhotoSearchResultsViewController.h"
 
 @interface FTHotTagsViewController ()
 @property (strong, nonatomic) FTHotTagsModel *model;
@@ -35,6 +36,10 @@
     
     self.title = @"Popular tags";
     self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
+    
+    FTPhotoSearchResultsViewController *resultsVC = [FTPhotoSearchResultsViewController new];
+    self.navigationItem.searchController = [[UISearchController alloc] initWithSearchResultsController:resultsVC];
+    self.navigationItem.searchController.searchResultsUpdater = resultsVC;
     
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
     [self.model queryAPI];
