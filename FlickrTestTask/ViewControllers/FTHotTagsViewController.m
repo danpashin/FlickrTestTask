@@ -17,6 +17,11 @@
 
 @implementation FTHotTagsViewController
 
+- (instancetype)init
+{
+    return [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
+}
+
 - (void)commonInit
 {
     _model = [FTHotTagsModel new];
@@ -27,6 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Popular tags";
+    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
     
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
     [self.model queryAPI];

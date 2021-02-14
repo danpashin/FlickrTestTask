@@ -8,19 +8,20 @@
 #import "FTLoadingModel+Internal.h"
 #import "FTURLRequest.h"
 #import "FTURLSession.h"
+#import "AppDelegate.h"
 
 @implementation FTLoadingModel (Internal)
 
 - (void)queryMethod:(NSString *)method parameters:(NSDictionary <NSString*, NSString*> *)parameters
 {
-    FTURLRequest *request = [[FTURLRequest alloc] initWithURL:[[self class] apiEndpoint]];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    FTURLRequest *request = [[FTURLRequest alloc] initWithURL:appDelegate.apiEndpoint];
     request.parameters[@"format"] = @"json";
     request.parameters[@"nojsoncallback"] = @"1";
     [request.parameters addEntriesFromDictionary:parameters];
     request.parameters[@"method"] = method;
-    
-    // TODO: Move this key to main model or app delegate
-    request.parameters[@"api_key"] = @"eedd1c39ee6367d74272360970bac2ce";
+    request.parameters[@"api_key"] = appDelegate.apiKey;
     
     [[FTURLSession sharedSession] sendRequest:request model:self];
 }

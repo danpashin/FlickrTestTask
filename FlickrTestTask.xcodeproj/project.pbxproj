@@ -16,9 +16,7 @@
 		0B59EAA825D6A7390002C245 /* FTHotTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAA725D6A7390002C245 /* FTHotTagsModel.m */; };
 		0B59EAB125D6ADE60002C245 /* FTLoadingModel+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59EAB025D6ADE60002C245 /* FTLoadingModel+Internal.m */; };
 		0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */; };
-		0B6FDF3025D6911A005F2B37 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */; };
 		0B6FDF3325D6911A005F2B37 /* FTHotTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */; };
-		0B6FDF3625D6911A005F2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3425D6911A005F2B37 /* Main.storyboard */; };
 		0B6FDF3825D6911B005F2B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3725D6911B005F2B37 /* Assets.xcassets */; };
 		0B6FDF3B25D6911B005F2B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3925D6911B005F2B37 /* LaunchScreen.storyboard */; };
 		0B6FDF3E25D6911B005F2B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FDF3D25D6911B005F2B37 /* main.m */; };
@@ -51,11 +49,8 @@
 		0B6FDF2825D6911A005F2B37 /* FlickrTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6FDF2B25D6911A005F2B37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B6FDF2E25D6911A005F2B37 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		0B6FDF3125D6911A005F2B37 /* FTHotTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHotTagsViewController.h; sourceTree = "<group>"; };
 		0B6FDF3225D6911A005F2B37 /* FTHotTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHotTagsViewController.m; sourceTree = "<group>"; };
-		0B6FDF3525D6911A005F2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B6FDF3725D6911B005F2B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B6FDF3A25D6911B005F2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B6FDF3C25D6911B005F2B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,15 +117,12 @@
 			children = (
 				0B6FDF2B25D6911A005F2B37 /* AppDelegate.h */,
 				0B6FDF2C25D6911A005F2B37 /* AppDelegate.m */,
-				0B6FDF2E25D6911A005F2B37 /* SceneDelegate.h */,
-				0B6FDF2F25D6911A005F2B37 /* SceneDelegate.m */,
 				0B9F153825D6CD1F00953792 /* Views */,
 				0B9F153525D6C72A00953792 /* ViewControllers */,
 				0B9F153025D6B9AE00953792 /* Static Models */,
 				0B6FDF5925D6A55A005F2B37 /* Loading Models */,
 				0B6FDF4C25D6977A005F2B37 /* Protocols */,
 				0B6FDF4525D693B8005F2B37 /* Network */,
-				0B6FDF3425D6911A005F2B37 /* Main.storyboard */,
 				0B6FDF3725D6911B005F2B37 /* Assets.xcassets */,
 				0B6FDF3925D6911B005F2B37 /* LaunchScreen.storyboard */,
 				0B6FDF3C25D6911B005F2B37 /* Info.plist */,
@@ -289,7 +281,6 @@
 			files = (
 				0B6FDF3B25D6911B005F2B37 /* LaunchScreen.storyboard in Resources */,
 				0B6FDF3825D6911B005F2B37 /* Assets.xcassets in Resources */,
-				0B6FDF3625D6911A005F2B37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +347,6 @@
 				0B6FDF2D25D6911A005F2B37 /* AppDelegate.m in Sources */,
 				0B6FDF3E25D6911B005F2B37 /* main.m in Sources */,
 				0BD6E22325D908E600295633 /* FTLoadingModelError.m in Sources */,
-				0B6FDF3025D6911A005F2B37 /* SceneDelegate.m in Sources */,
 				0B6FDF5725D6A558005F2B37 /* FTLoadingModel.m in Sources */,
 				0B9F152D25D6B9A000953792 /* FTPhoto.m in Sources */,
 				0B6FDF4825D693D6005F2B37 /* FTURLRequest.m in Sources */,
@@ -366,14 +356,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0B6FDF3425D6911A005F2B37 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B6FDF3525D6911A005F2B37 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0B6FDF3925D6911B005F2B37 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

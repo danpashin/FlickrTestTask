@@ -9,11 +9,6 @@
 
 @implementation FTLoadingModel
 
-+ (NSString *)apiEndpoint
-{
-    return @"https://api.flickr.com/services/rest/";
-}
-
 - (void)queryAPI
 {
     [NSException raise:@"queryAPI is not implemented." format:@"Subclasses must implement a valid method"];

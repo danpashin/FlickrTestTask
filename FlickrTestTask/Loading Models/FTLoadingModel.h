@@ -25,9 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTLoadingModel : NSObject <FTResponseModel>
 
-/// Endpoint of the current API
-+ (NSString *)apiEndpoint;
-
 @property (weak, nonatomic) id <FTLoadingModelDelegate> delegate;
 
 /// Sends query in background to the API server
