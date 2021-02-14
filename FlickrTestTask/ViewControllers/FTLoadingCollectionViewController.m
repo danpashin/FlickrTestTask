@@ -44,8 +44,17 @@
     [super viewDidLoad];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    layout.itemSize =  CGSizeMake(140.0, 120.0);
-    layout.sectionInset = UIEdgeInsetsMake(16.0, 24.0, 16.0, 24.0);
+    layout.sectionInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPad) {
+        layout.itemSize =  CGSizeMake(112.0, 112.0);
+        layout.minimumLineSpacing = 8.0;
+        layout.minimumInteritemSpacing = 8.0;
+    } else {
+        layout.itemSize =  CGSizeMake(140.0, 140.0);
+        layout.minimumLineSpacing = 16.0;
+        layout.minimumInteritemSpacing = 8.0;
+    }
 }
 
 #pragma mark - FTLoadingModelDelegate

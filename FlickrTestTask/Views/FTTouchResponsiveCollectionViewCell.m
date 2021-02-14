@@ -60,11 +60,9 @@ typedef NS_ENUM(NSUInteger, FTTouchState) {
 
         if (animated) {
             const CGFloat scaleRatio = (state == kFTTouchStatePressed) ? 0.85 : 1.0;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear animations:^{
-                    self.transform = CGAffineTransformMakeScale(scaleRatio, scaleRatio);
-                } completion:nil];
-            });
+            [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut animations:^{
+                self.transform = CGAffineTransformMakeScale(scaleRatio, scaleRatio);
+            } completion:nil];
         }
     }
 }
@@ -79,7 +77,7 @@ typedef NS_ENUM(NSUInteger, FTTouchState) {
 {
     [super touchesEnded:touches withEvent:event];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self setState:kFTTouchStateNormal animated:YES];
     });
 }
