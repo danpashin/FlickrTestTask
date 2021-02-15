@@ -18,11 +18,6 @@
 
 @implementation FTHotTagsViewController
 
-- (instancetype)init
-{
-    return [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
-}
-
 - (void)commonInit
 {
     _model = [FTHotTagsModel new];

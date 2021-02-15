@@ -6,26 +6,19 @@
 //
 
 #import "FTLoadingCollectionViewController.h"
-#import <os/log.h>
+#import "FTCollectionView.h"
+#import "FTCollectionViewSquareLayout.h"
+
+@interface FTLoadingCollectionViewController ()
+@property (null_resettable, nonatomic, strong) FTCollectionView *collectionView;
+@end
 
 @implementation FTLoadingCollectionViewController
+@dynamic collectionView;
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
+    return [self initWithCollectionViewLayout:[FTCollectionViewSquareLayout new]];
 }
 
 - (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout
@@ -39,25 +32,9 @@
 
 - (void)commonInit {}
 
-- (void)viewDidLoad
+- (void)loadView
 {
-    [super viewDidLoad];
-    
-    self.collectionView.alwaysBounceVertical = YES;
-    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
-    
-    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    layout.sectionInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
-    
-    if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPad) {
-        layout.itemSize = CGSizeMake(112.0, 112.0);
-        layout.minimumLineSpacing = 8.0;
-        layout.minimumInteritemSpacing = 8.0;
-    } else {
-        layout.itemSize = CGSizeMake(140.0, 140.0);
-        layout.minimumLineSpacing = 16.0;
-        layout.minimumInteritemSpacing = 8.0;
-    }
+    self.collectionView = [[FTCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
 }
 
 #pragma mark - FTLoadingModelDelegate
@@ -65,12 +42,7 @@
 - (void)loadingModelReceivedUpdate:(FTLoadingModel *)model
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionView reloadData];
-        
-        UIViewAnimationOptions opts = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState;
-        [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:0.0 options:opts animations:^{
-            [self.collectionView layoutIfNeeded];
-        } completion:nil];
+        [self.collectionView reloadDataAnimated:YES];
     });
 }
 

@@ -14,11 +14,6 @@
 
 @implementation FTTagDetailViewController
 
-- (instancetype)init
-{
-    return [self initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
-}
-
 - (void)commonInit
 {
     _model = [FTSearchModel new];
@@ -30,8 +25,7 @@
     [super viewDidLoad];
     
     self.title = self.model.tags.firstObject;
-    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
-    self.collectionView.alwaysBounceVertical = YES;
+    
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
     
     [self.model queryAPI];

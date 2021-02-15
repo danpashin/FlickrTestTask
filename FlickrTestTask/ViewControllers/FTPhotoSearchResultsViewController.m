@@ -12,6 +12,7 @@
 
 @interface FTPhotoSearchResultsViewController ()
 
+/// Block which will be executed after user stopped typing 
 @property (strong, nonatomic, nullable) dispatch_block_t throttledSearchBlock;
 
 @property (strong, nonatomic, nullable) FTSearchModel *model;
@@ -19,11 +20,6 @@
 @end
 
 @implementation FTPhotoSearchResultsViewController
-
-- (instancetype)init
-{
-    return [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
-}
 
 - (void)commonInit
 {    
@@ -35,22 +31,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     [self.collectionView registerClass:[FTHPhotoCollectionViewCell class] forCellWithReuseIdentifier:@"previewCell"];
 }
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
+    // User typed some word. Cancel search
     if (self.throttledSearchBlock) {
         dispatch_block_cancel(self.throttledSearchBlock);
     }
     
+    // Clear all results if user deleted text
     NSString *text = [searchController.searchBar.text copy];
     if (text.length == 0) {
         [self.model clearResults];
         return;
     }
     
+    // Create new execution block ('cause cannot resume previous)
+    // And delay its execution
     self.throttledSearchBlock = dispatch_block_create(0, ^{
         self.model.text = text;
         [self.model queryAPI];
