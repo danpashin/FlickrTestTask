@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Creates photo URL with provided size
 /// @param size Size of the photo. Must be provided.
-- (NSString *)urlForSize:(FTPhotoSize)size;
+- (NSURL *)urlForSize:(FTPhotoSize)size;
 
 @end
 

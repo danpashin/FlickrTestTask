@@ -72,8 +72,8 @@ static const CGFloat cornerRadius = 8.0;
 {
     self.caption.text = self.photo.caption;
     
-    NSString *photoURL = [self.photo urlForSize:self.preferredPhotoSize];
-    [self.photoView sd_setImageWithURL:[NSURL URLWithString:photoURL]];
+    NSURL *photoURL = [self.photo urlForSize:self.preferredPhotoSize];
+    [self.photoView sd_setImageWithURL:photoURL];
 }
 
 - (void)setShowsCaption:(BOOL)showsCaption

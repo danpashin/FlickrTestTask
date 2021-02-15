@@ -11,7 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTPhotoViewController : UIViewController
 
-@property (copy, nonatomic) NSString *photoURL;
+/// Remote URL of the photo which will be used to download photo and display it.
+@property (copy, nonatomic) NSURL *photoURL;
 
 @end
 

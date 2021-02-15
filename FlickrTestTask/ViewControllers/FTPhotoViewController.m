@@ -53,7 +53,7 @@
     [self updateMinZoomScaleForSize:self.view.bounds.size];
 }
 
-- (void)setPhotoURL:(NSString *)photoURL
+- (void)setPhotoURL:(NSURL *)photoURL
 {
     _photoURL = photoURL;
     
@@ -91,7 +91,7 @@
 
 - (void)loadImage
 {
-    [self.scrollView.photoView sd_setImageWithURL:[NSURL URLWithString:self.photoURL] 
+    [self.scrollView.photoView sd_setImageWithURL:self.photoURL
                                         completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         self.scrollView.photoView.image = image;
         [self.scrollView.photoView layoutIfNeeded];

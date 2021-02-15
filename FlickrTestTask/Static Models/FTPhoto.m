@@ -48,12 +48,12 @@
     }
 }
 
-- (NSString *)urlForSize:(FTPhotoSize)size
+- (NSURL *)urlForSize:(FTPhotoSize)size
 {
-    return [NSString stringWithFormat:
+    return [NSURL URLWithString:[NSString stringWithFormat:
             @"https://live.staticflickr.com/%@/%@_%@%@.jpg", 
             self.server_id, self.identifier, self.secret, [self stringSizeForSize:size]
-            ];
+            ]];
 }
 
 - (NSString *)description
